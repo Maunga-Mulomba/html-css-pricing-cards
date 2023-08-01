@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9fafea5;
+}
+
+.container {
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  color: #28264b;
+  width: 80%;
+}
+
+.free {
+  box-shadow: 0 7px 10px 0 #dee4f6;
+}
+.lite {
+  box-shadow: 0 7px 10px 0 #e6dafe;
+}
+.pro {
+  box-shadow: 0 7px 10px 0 #fbf0e4;
+}
+
+.package {
+  background-color: white;
+  text-align: center;
+  padding: 0.5rem 0.5rem 1rem;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 3rem;
+}
+
+/* PACKAGE NAME */
+.package__name {
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.free .package__name {
+  background-color: #f9fafe;
+}
+
+.lite .package__name {
+  background: linear-gradient(to right, #c5d4fa, #b474ff);
+  color: white;
+}
+
+.pro .package__name {
+  background: linear-gradient(to right, #fdb3c6, #ffca75);
+
+  color: white;
+}
+
+/* PACKAGE DETAILS */
+
+.package__details {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.package__details--price {
+  display: flex;
+  justify-content: center;
+}
+
+.package__details--price p:first-of-type {
+  font-weight: 600;
+}
+
+.package__details--price p:last-of-type {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.package__details--price span {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.package__details--use {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.package__details--pitch {
+  margin: 2rem auto 0;
+  width: 80%;
+}
+
+/* BUTTON */
+.package__btn {
+  padding: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.lite .package__btn {
+  background-color: #28264b;
+  color: white;
+  border: none;
+}
+
+/* FEATURES */
+.package__features {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.package__features > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.package__features .tick {
+  color: rgb(25, 202, 25);
+}
+
+.package__features .cross {
+  color: rgb(233, 18, 18);
+}
+
+/* **************************************** */
+@media (max-width: 1080px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+}
